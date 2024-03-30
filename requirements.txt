@@ -6,4 +6,5 @@ statsmodels
 seaborn
 google-search-results
 google-play-scraper
+google-api-python-client==1.12.8
 serpapi
