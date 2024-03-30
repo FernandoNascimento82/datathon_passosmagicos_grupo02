@@ -4,5 +4,6 @@ numpy
 matplotlib
 statsmodels
 seaborn
-GoogleSearch
+google-search-results
+google-play-scraper
 serpapi
