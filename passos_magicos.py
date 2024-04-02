@@ -22,25 +22,77 @@ st.write('')
 image_passos_magicos = "PassosMagicos.png"
 image_missao_visao_pm = "MissaoVisaoPM.png"
 image_aceleracao_conhecimento_pm = "aceleracao_conhecimento.png"
+image_depoimento_01 = "depoimento_01.png"
+image_depoimento_02 = "depoimento_02.png"
+image_depoimento_03 = "depoimento_03.png"
+image_depoimento_04 = "depoimento_04.png"
+image_depoimento_intrevistador_pse_01 = "depoimento_intrevistador_pse_01.png"
+image_depoimento_intrevistador_pse_02 = "depoimento_intrevistador_pse_02.png"
 file_path = 'PEDE_PASSOS_DATASET_FIAP.csv'
+
+# Carregar a chave de API do arquivo secrets.toml
+secrets = toml.load('secrets.toml')
+api_key = secrets['youtube']['api_key']
+# Inicializar o serviço da API do YouTube
+youtube = build('youtube', 'v3', developerKey=api_key)
+
+#Otendo o total de inscritos no canal do YouTube https://www.youtube.com/@passosmagicos700
+channel_id = 'UChYs-rE3RMxFfHj47oOiOBA'
+channel_response = youtube.channels().list(part='statistics', id=channel_id).execute()
+total_inscritos700 = channel_response['items'][0]['statistics']['subscriberCount']
 
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
     st.image(image_passos_magicos)
 
-st.markdown("<h1 style='text-align: center; color: grey;'>ONG Passos Mágicos</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: Blue;'>Associação Passos Mágicos</h1>", unsafe_allow_html=True)
 st.write("Rua Francisco Volante, 13 - Jd. Brasil, Embu-Guaçu – SP | CEP: 06.900-530")
-st.write("(11) 98208-3282 | passosmagicos@passosmagicos.org.br")
+st.write("**Cel:** (11) 98208-3282 | **e-mail:** passosmagicos@passosmagicos.org.br")
 st.write("**Site:** https://passosmagicos.org.br/")
 st.write("**Instagram:** https://www.instagram.com/passosmagicos/")
 st.write("**LinkedIn:** https://www.linkedin.com/company/passosmagicos/")
+st.write("**Canal do YouTube:** https://www.youtube.com/@passosmagicos700",f" (**{total_inscritos700} Inscritos.**)")
 st.write("")
 
-msg_vamos_conhecer_pm = '<p style="font-family:Arial; color:Red; font-size: 15px;">Vamos conhecer um pouco sobre a ONG Passos Mágicos</p>'
+msg_vamos_conhecer_pm = '<p style="font-family:Arial; color:Red; font-size: 15px">Vamos conhecer um pouco sobre a ONG Passos Mágicos</p>'
 st.markdown(msg_vamos_conhecer_pm, unsafe_allow_html=True)
 
 st.image(image_missao_visao_pm)
 st.write()
+
+msg_nossa_historia_titulo = '<p style="font-family:Arial; text-align: center; color:Red; font-size: 20px;"><b>Nossa história</b></p>'
+st.markdown(msg_nossa_historia_titulo, unsafe_allow_html=True)
+
+msg_nossa_historia_texto = '<p style="font-family:Arial; text-align: center; color:black; font-size: 15px;">'
+msg_nossa_historia_texto += 'A Associação Passos Mágicos tem uma trajetória de 30 anos de atuação, trabalhando na transformação da vida de crianças e jovens de baixa renda os levando a melhores oportunidades de vida.'
+msg_nossa_historia_texto += '<br>A transformação, idealizada por Michelle Flues e Dimetri Ivanoff, começou em 1992, atuando dentro de orfanatos, no município de Embu-Guaçu.'
+msg_nossa_historia_texto += '<br><i><b>Em 2016, depois de anos de atuação, decidem ampliar o programa para que mais jovens tivessem acesso a essa fórmula mágica para transformação</b></i> que inclui: educação de qualidade, auxílio psicológico/psicopedagógico, ampliação de sua visão de mundo e protagonismo. Passaram então a atuar como um projeto social e educacional, criando assim a Associação Passos Mágicos.</p>'
+st.markdown(msg_nossa_historia_texto, unsafe_allow_html=True)
+
+st.write("---")
+msg_depoimentos = '<p style="font-family:Arial; text-align: center; color:Black; font-size: 15px;"><i><b>Depoimentos enviados pelos pais após uma reunião</b></i></p>'
+st.markdown(msg_depoimentos, unsafe_allow_html=True)
+
+col1, col2  = st.columns(2)
+with col1:
+    st.image(image_depoimento_01)
+
+with col2:
+    st.image(image_depoimento_02)
+
+col1, col2  = st.columns(2)
+with col1:
+    st.image(image_depoimento_03)
+
+with col2:
+    st.image(image_depoimento_04)    
+
+st.write("---")
+msg_depoimentos = '<p style="font-family:Arial; text-align: center; color:Black; font-size: 15px;"><i><b>Depoimentos de intrevistadores do PSE em 2020</b></i</p>'
+st.markdown(msg_depoimentos, unsafe_allow_html=True)
+st.image(image_depoimento_intrevistador_pse_01)
+st.image(image_depoimento_intrevistador_pse_02)    
+st.write("---")
 
 col1, col2, col3  = st.columns(3)
 
@@ -51,23 +103,35 @@ video_urls =[
 ]
 
 with col1:
+    video_id = 'hT_jOmLzpH4'
+    video_response = youtube.videos().list(part='statistics', id=video_id).execute()
+    total_views = video_response['items'][0]['statistics']['viewCount']
     st.video(video_urls[0])
+    st.write(f'{total_views} Visualizações.')
 
 with col2:
+    video_id = 'FrbnXv8aCV4'
+    video_response = youtube.videos().list(part='statistics', id=video_id).execute()
+    total_views = video_response['items'][0]['statistics']['viewCount']    
     st.video(video_urls[1])
+    st.write(f'{total_views} Visualizações.')
 
 with col3:
+    video_id = '2ONPDnXCJiw'
+    video_response = youtube.videos().list(part='statistics', id=video_id).execute()
+    total_views = video_response['items'][0]['statistics']['viewCount']       
     st.video(video_urls[2])
-  
+    st.write(f'{total_views} Visualizações.')
+
+
 st.video('https://youtu.be/36ZfZQa68og')
 
-# Carregar a chave de API do arquivo secrets.toml
-secrets = toml.load('secrets.toml')
-api_key = secrets['youtube']['api_key']
-# Inicializar o serviço da API do YouTube
-youtube = build('youtube', 'v3', developerKey=api_key)
+
 # ID do vídeo do YouTube
 video_id = '36ZfZQa68og'
+video_response = youtube.videos().list(part='statistics', id=video_id).execute()
+total_views = video_response['items'][0]['statistics']['viewCount']
+st.write(f'{total_views} Visualizações.')
 
 # Capturar os comentários do vídeo
 response = youtube.commentThreads().list(
@@ -86,10 +150,13 @@ for item in response['items']:
 
 st.write("")
 st.image(image_aceleracao_conhecimento_pm)
-url_fonte = f"[{'Fonte: Site Passos Magicos Relatorio_de_atividades_2022'}]({'https://passosmagicos.org.br/wp-content/uploads/2023/04/relatorio_de_atividades_2022_passosmagicos_compressed.pdf'})"
+url_fonte = f'[{'*Fonte: Site Passos Magicos Relatorio_de_atividades_2022*'}]({'https://passosmagicos.org.br/wp-content/uploads/2023/04/relatorio_de_atividades_2022_passosmagicos_compressed.pdf'})'
 st.markdown(url_fonte, unsafe_allow_html=True)
 st.write("")
 st.write("---")
+
+
+
 
 
 
@@ -136,7 +203,7 @@ media_inde_por_ano = df[['INDE_2020', 'INDE_2021', 'INDE_2022']].mean()
 st.write("")
 st.write("---")
 
-st.write("***INDE***: *Indice do Desenvolvimento Educacional – Metrica de Processo Avaliativo Geral do Aluno; Dado pela Ponderação dos indicadores: IAN, IDA, IEG, IAA, IPS, IPP e IPV*")
+st.write("***INDE***: *Indice do Desenvolvimento Educacional – Metrica de Processo Avaliativo Geral do Aluno; Dado pela Ponderação dos indicadores: IAN, IDA, IEG, IAA, IPS, IPP e IPV. A queda do indice em 2021 pode ter relação ao periodo de pandemia da COVID-19.*")
 
 anos = ['2020', '2021', '2022']
 grafico = plt.figure(figsize=(10, 6))
@@ -209,5 +276,3 @@ plt.legend(bbox_to_anchor = (1, 1), ncol = 8, title='Atingiu o Ponto de Virada',
 st.pyplot(grafico)
 
 st.write("---")
-
-
