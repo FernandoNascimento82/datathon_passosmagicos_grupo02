@@ -126,7 +126,6 @@ with col3:
 
 st.video('https://youtu.be/36ZfZQa68og')
 
-
 # ID do vídeo do YouTube
 video_id = '36ZfZQa68og'
 video_response = youtube.videos().list(part='statistics', id=video_id).execute()
@@ -150,15 +149,10 @@ for item in response['items']:
 
 st.write("")
 st.image(image_aceleracao_conhecimento_pm)
-url_fonte = f'[{'*Fonte: Site Passos Magicos Relatorio_de_atividades_2022*'}]({'https://passosmagicos.org.br/wp-content/uploads/2023/04/relatorio_de_atividades_2022_passosmagicos_compressed.pdf'})'
+url_fonte = f'[{'Fonte: Site Passos Magicos Relatorio_de_atividades_2022'}]({'https://passosmagicos.org.br/wp-content/uploads/2023/04/relatorio_de_atividades_2022_passosmagicos_compressed.pdf'})'
 st.markdown(url_fonte, unsafe_allow_html=True)
 st.write("")
 st.write("---")
-
-
-
-
-
 
 st.write("Analisando o arquivo PEDE_PASSOS_DATASET_FIAP.csv disponibilizado pela ONG para realização do Datathon")
 
