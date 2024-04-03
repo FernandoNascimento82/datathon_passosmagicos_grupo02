@@ -77,7 +77,7 @@ if tab_selected == 'Conhecendo a Associação Passos Mágicos':
     st.markdown(msg_nossa_historia_texto, unsafe_allow_html=True)
 
     st.image(image_aceleracao_conhecimento_pm)
-    url_fonte = f'[{'Fonte: Site Passos Magicos Relatorio_de_atividades_2022'}]({'https://passosmagicos.org.br/wp-content/uploads/2023/04/relatorio_de_atividades_2022_passosmagicos_compressed.pdf'})'
+    url_fonte = f"[{'Fonte: Site Passos Magicos Relatorio_de_atividades_2022'}]({'https://passosmagicos.org.br/wp-content/uploads/2023/04/relatorio_de_atividades_2022_passosmagicos_compressed.pdf'})"
     st.markdown(url_fonte, unsafe_allow_html=True)
     st.write("")
     st.write("---")
