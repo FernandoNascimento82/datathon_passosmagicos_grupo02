@@ -7,3 +7,9 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 [Python](https://www.python.org/) e [Streamlit](https://streamlit.io/)
 
 <h1>✒️ Autores</h1>
+<i>Integrandes do Grupo 02</i>
+Bárbara Pereira Godoi
+Fernando Correia do Nascimento
+Guilherme Gentil Da Silva
+João Vitor Lopes Arruda
+William Fernandes Bento
