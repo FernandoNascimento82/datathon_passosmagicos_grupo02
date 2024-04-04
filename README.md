@@ -8,8 +8,8 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 
 <h1>✒️ Autores</h1>
 <i>Integrandes do Grupo 02</i>
-Bárbara Pereira Godoi
-Fernando Correia do Nascimento
-Guilherme Gentil Da Silva
-João Vitor Lopes Arruda
+Bárbara Pereira Godoi<br>
+Fernando Correia do Nascimento<br>
+Guilherme Gentil Da Silva<br>
+João Vitor Lopes Arruda<br>
 William Fernandes Bento
