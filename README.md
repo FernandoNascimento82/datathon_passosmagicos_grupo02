@@ -8,6 +8,8 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 
 [Python](https://www.python.org/) e [Streamlit](https://streamlit.io/)
 
+[Projeto Passos Mágicos em Streamlit](https://datathonpaappsmagicosgrupo0.streamlit.app/)
+
 <h1>✒️ Autores</h1>
 <b></b><i>Integrandes do Grupo 02</i><br>
 Bárbara Pereira Godoi<br>
@@ -15,3 +17,5 @@ Fernando Correia do Nascimento<br>
 Guilherme Gentil Da Silva<br>
 João Vitor Lopes Arruda<br>
 William Fernandes Bento
+
+
