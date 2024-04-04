@@ -10,7 +10,7 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 
 <h1>Nosso Projeto</h1>
 [Acesse nosso projeto](https://datathonpaappsmagicosgrupo0.streamlit.app/)
-
+<br>
 ![Principais Canais](https://github.com/FernandoNascimento82/datathon_passosmagicos_grupo02/blob/main/README_PrincipaisCainas.png)
 
 <h1>✒️ Autores</h1>
