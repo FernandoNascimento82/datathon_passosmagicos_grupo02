@@ -5,3 +5,5 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 <h1>🛠️ Construído com</h1>
 
 [Python](https://www.python.org/) e [Streamlit](https://streamlit.io/)
+
+<h1>✒️ Autores</h1>
