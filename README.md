@@ -8,8 +8,8 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 
 [Python](https://www.python.org/) e [Streamlit](https://streamlit.io/)
 
-<h1> Nosso Projeto</h1>
-[Projeto Passos Mágicos em Streamlit](https://datathonpaappsmagicosgrupo0.streamlit.app/)
+<h1>Nosso Projeto</h1>
+[Acesse nosso projeto](https://datathonpaappsmagicosgrupo0.streamlit.app/)
 
 ![Principais Canais](https://github.com/FernandoNascimento82/datathon_passosmagicos_grupo02/blob/main/README_PrincipaisCainas.png)
 
