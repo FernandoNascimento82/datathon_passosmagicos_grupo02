@@ -1,4 +1,4 @@
-[Associação Passos Mágicos](https://github.com/FernandoNascimento82/datathon_passosmagicos_grupo02/blob/main/PassosMagicos.png)
+![Associação Passos Mágicos](https://github.com/FernandoNascimento82/datathon_passosmagicos_grupo02/blob/main/PassosMagicos.png)
 
 # Projeto Assosiação Passos Mágicos
 
