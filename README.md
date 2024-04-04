@@ -4,6 +4,4 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 
 <h1>🛠️ Construído com</h1>
 
-[Python](https://www.python.org/)
-
-Linguagem Python com Streamlit
+[Python](https://www.python.org/) e [Streamlit](https://streamlit.io/)
