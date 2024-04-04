@@ -11,9 +11,9 @@ O projeto demonstrou o poder da análise de dados em amplificar o impacto das in
 # Nosso Projeto
 
 [Acesse nosso projeto](https://datathonpaappsmagicosgrupo0.streamlit.app/)
-<br>
+
 ![Principais Canais](https://github.com/FernandoNascimento82/datathon_passosmagicos_grupo02/blob/main/README_PrincipaisCainas.png)
-![Associação Passos Mágicos](https://github.com/FernandoNascimento82/datathon_passosmagicos_grupo02/blob/main/PassosMagicos.png)
+![Selecione o Assunto](https://github.com/FernandoNascimento82/datathon_passosmagicos_grupo02/blob/main/README_SelecioneAssunto.png)
 
 <h1>✒️ Autores</h1>
 <b></b><i>Integrandes do Grupo 02</i><br>
